@@ -8,4 +8,4 @@ Copy-Item $networkPath $localPath
 
 Copy-Item $defaultPath $env:TEMP
 
-Start-Process -FilePath $localPath -WorkingDirectory "C:\Users\MCPS\Desktop -Verb RunAs
+Start-Process -FilePath $localPath -WorkingDirectory "C:\Users\MCPS\Desktop" -Verb RunAs
