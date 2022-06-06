@@ -1,11 +1,17 @@
-﻿$networkPath = $($args[0])
+﻿$netScriptPath = $($args[0])
 
-$localPath = $($args[1])
+$netBatchPath = $($args[1])
 
-$defaultPath = $($args[2])
+$scriptPath = $($args[2])
 
-Copy-Item $networkPath $localPath
+$batchPath = $($args[3])
+
+$defaultPath = $($args[4])
+
+Copy-Item $netScriptPath $scriptPath
+
+Copy-Item $netBatchPath $batchPath
 
 Copy-Item $defaultPath $env:TEMP
 
-Start-Process -FilePath $localPath -WorkingDirectory "C:\Users\MCPS\Desktop" -Verb RunAs
+Start-Process -FilePath $batchPath -Verb RunAs
